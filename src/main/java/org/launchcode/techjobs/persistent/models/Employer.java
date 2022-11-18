@@ -14,9 +14,7 @@ public class Employer extends AbstractEntity {
     @NotBlank
     @Size(max = 100)
     private String location;
-//below:Use the @OneToMany and @JoinColumn annotations on the jobs list in Employer to declare the relationship between
-// data tables. Recall that this annotation needs a name parameter. What should its value be?
-//    formally name="employer_id"
+
     @OneToMany
     @JoinColumn(name="employer_id")
     private List<Job> jobs = new ArrayList<>();
